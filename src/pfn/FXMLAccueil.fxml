@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfn.FXMLAccueilController">
+   <children>
+      <Pane prefHeight="681.0" prefWidth="964.0" style="-fx-background-color: #AB7AF0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="81.0" layoutX="11.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/96F20351-A331-427F-A43C-A4B23FE982FD.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="90.0" layoutY="37.0" opacity="0.78" text="Université Djillali LIABES Sidi-Bel-Abbès" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="pAcc" prefHeight="447.0" prefWidth="624.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0" />
+      <AnchorPane layoutY="97.0" prefHeight="447.0" prefWidth="204.0" style="-fx-background-color: #F4EEF9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="383.0" prefWidth="42.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="btnLogincrp" layoutX="1.0" layoutY="56.0" onAction="#handlecorpusAction" prefHeight="47.0" prefWidth="203.0" text="Corpus" textFill="#ab7af0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="56.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Data_Backup_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLoginac" layoutX="1.0" layoutY="4.0" onAction="#handleAccueilAction" prefHeight="47.0" prefWidth="203.0" text="Accueil" textFill="#ab7af0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_64px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLoginrch" layoutX="1.0" layoutY="109.0" onAction="#handlerechrAction" prefHeight="47.0" prefWidth="203.0" text="Recherche" textFill="#ab7af0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="109.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pcorp" layoutX="202.0" layoutY="97.0" prefHeight="447.0" prefWidth="624.0" style="-fx-background-color: #F1F8FA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <TableView fx:id="tab" editable="true" layoutX="3.0" layoutY="85.0" prefHeight="360.0" prefWidth="632.0" stylesheets="@style.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="85.0">
+              <columns>
+                <TableColumn fx:id="nomd" prefWidth="216.0" text="Nom documnet " />
+                <TableColumn fx:id="nbrt" prefWidth="205.0" text="nombre de tokens" />
+                  <TableColumn fx:id="totl" prefWidth="192.0" text="nombre tolat de motes" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="495.0" layoutY="45.0" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="204.0" stylesheets="@style.css" text="Recupere documntes" textFill="#ab7af0">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="3.0" layoutY="-1.0" prefHeight="53.0" prefWidth="173.0" styleClass="label-header" stylesheets="@style.css" text="Corpus" textFill="#ab7af0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="0.0" radius="0.0" width="0.0" />
+               </effect>
+            </Label>
+            <Label fx:id="nbrdoc" layoutX="6.0" layoutY="63.0" prefHeight="17.0" prefWidth="237.0" styleClass="label-bright" stylesheets="@style.css" text="aucan documnt dans corpus" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="prech" layoutX="202.0" layoutY="97.0" prefHeight="601.0" prefWidth="823.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="15.0" styleClass="label-header" stylesheets="@style.css" text="Recherche" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0" />
+            <JFXTextField fx:id="textreq" focusColor="#a97af0" labelFloat="true" layoutX="15.0" layoutY="80.0" prefHeight="37.0" prefWidth="453.0" promptText=" Taper une requête" styleClass="textField" stylesheets="@style.css" unFocusColor="#ab7af0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0" />
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" ellipsisString="Recherche" graphicTextGap="20.0" layoutX="539.0" layoutY="141.0" onAction="#handlerechrech" prefHeight="38.0" prefWidth="197.0" styleClass="buttonre" stylesheets="@style.css" text="Recherche" wrapText="true" AnchorPane.leftAnchor="539.0" AnchorPane.topAnchor="141.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="combonbrm" focusColor="#ab7af0" labelFloat="true" layoutX="559.0" layoutY="86.0" prefHeight="25.0" prefWidth="156.0" promptText="La taille de n-gram" unFocusColor="#ab7af0" AnchorPane.leftAnchor="559.0" AnchorPane.topAnchor="86.0" />
+            <JFXTextField fx:id="Docp" focusColor="#cdc3e1" labelFloat="true" layoutX="14.0" layoutY="143.0" prefHeight="33.0" prefWidth="453.0" promptText="Les documents pertinents pour la requête Q corresponde :" styleClass="textField" stylesheets="@style.css" unFocusColor="#cbbde4" />
+            <TabPane id="TabPane" layoutX="10.0" layoutY="195.0" prefHeight="405.0" prefWidth="761.0" side="LEFT" stylesheets="@TabPane.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="195.0">
+               <tabs>
+                  <Tab>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="399.0" prefWidth="703.0" styleClass="Tab">
+                           <children>
+                              <TableView fx:id="tabres" layoutX="19.0" layoutY="14.0" prefHeight="377.0" prefWidth="697.0" stylesheets="@style.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="14.0">
+                                <columns>
+                                  <TableColumn fx:id="nomd1" prefWidth="123.0" text="Nom documnet" />
+                                  <TableColumn fx:id="score" prefWidth="160.0" text="Score" />
+                                    <TableColumn fx:id="ft_idf" prefWidth="124.0" text="Ft_IDF" />
+                                    <TableColumn fx:id="patch" prefWidth="174.0" text="Patch" />
+                                    <TableColumn fx:id="size" minWidth="0.0" prefWidth="122.0" text="Size" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Menu_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="509.0" styleClass="Tab" />
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_dai.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</AnchorPane>

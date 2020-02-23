@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" prefHeight="600.0" prefWidth="1050" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.UiController">
+   <children>
+      <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="80.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="185.0" prefWidth="80.0" styleClass="parent">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../images/search_data-512.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <JFXButton fx:id="btnLoginac" contentDisplay="GRAPHIC_ONLY" onAction="#handleAccueilAction" prefHeight="65.0" prefWidth="73.0" styleClass="buttons">
+               <graphic>
+                  <ImageView fx:id="imageac" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLogincrp" contentDisplay="GRAPHIC_ONLY" onAction="#handlecorpusAction" prefHeight="65.0" prefWidth="73.0" styleClass="buttons">
+               <graphic>
+                  <ImageView fx:id="imagecrp" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Data_Backup_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLoginrch" contentDisplay="GRAPHIC_ONLY" onAction="#handlerechrAction" prefHeight="65.0" prefWidth="73.0" styleClass="buttons">
+               <graphic>
+                  <ImageView fx:id="imagerech" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLogindaig" contentDisplay="GRAPHIC_ONLY" onAction="#handldisgnerAction" prefHeight="65.0" prefWidth="73.0" styleClass="buttons">
+               <graphic>
+                  <ImageView fx:id="imagedisg" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_dai.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <HBox alignment="CENTER" prefHeight="248.0" prefWidth="80.0" styleClass="parent">
+               <children>
+                  <ImageView fx:id="image" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@avatar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="30.0">
+         <children>
+            <Label fx:id="labl1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="roundLabel" />
+            <Label fx:id="labl2" layoutX="18.0" layoutY="303.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="roundLabel">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="labl3" layoutX="18.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="roundLabel">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="labl4" layoutX="18.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="15.0" styleClass="roundLabel">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <FontAwesomeIcon glyphStyle="-fx-fill:grey" iconName="CLOSE" layoutX="1025.0" layoutY="25.0" onMouseClicked="#close" size="1.5em">
+       
+      </FontAwesomeIcon>
+      <Pane layoutX="83.0" layoutY="27.0" prefHeight="86.0" prefWidth="936.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="256.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/96F20351-A331-427F-A43C-A4B23FE982FD.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="299.0" layoutY="55.0" opacity="0.78" text="Université Djillali LIABES Sidi-Bel-Abbès" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="pcorp" layoutX="111.0" layoutY="107.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F1F8FA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
+         <children>
+            <TableView fx:id="tab" editable="true" layoutX="3.0" layoutY="98.0" prefHeight="486.0" prefWidth="932.0" stylesheets="@../pfn/style.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="98.0">
+               <columns>
+                  <TableColumn fx:id="nomd" prefWidth="216.0" text="Nom documnet " />
+                  <TableColumn fx:id="nbrt" prefWidth="205.0" text="nombre de tokens" />
+                  <TableColumn fx:id="totl" prefWidth="192.0" text="nombre tolat de motes" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="711.0" layoutY="55.0" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="204.0" stylesheets="@../pfn/style.css" text="Recupere documntes" textFill="#ab7af0">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="382.0" prefHeight="52.0" prefWidth="173.0" styleClass="label-header" stylesheets="@../pfn/style.css" text="Corpus" textFill="#ab7af0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="0.0" radius="0.0" width="0.0" />
+               </effect>
+            </Label>
+            <Label fx:id="nbrdoc" layoutX="14.0" layoutY="80.0" prefHeight="17.0" prefWidth="237.0" styleClass="label-bright" stylesheets="@../pfn/style.css" text="aucan documnt dans corpus" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="prech" layoutX="111.0" layoutY="107.0" prefHeight="601.0" prefWidth="936.0" style="-fx-background-color: #FAFAFA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="375.0" layoutY="7.0" styleClass="label-header" stylesheets="@../pfn/style.css" text="Recherche" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="7.0" />
+            <JFXTextField fx:id="textreq" focusColor="#a97af0" labelFloat="true" layoutX="15.0" layoutY="80.0" prefHeight="37.0" prefWidth="453.0" promptText=" Taper une requête" styleClass="textField" stylesheets="@../pfn/style.css" unFocusColor="#ab7af0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0" />
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" ellipsisString="Recherche" graphicTextGap="20.0" layoutX="717.0" layoutY="90.0" onAction="#handlerechrech" prefHeight="38.0" prefWidth="197.0" styleClass="buttonre" stylesheets="@../pfn/style.css" text="Recherche" wrapText="true" AnchorPane.leftAnchor="717.0" AnchorPane.topAnchor="90.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="combonbrm" focusColor="#ab7af0" labelFloat="true" layoutX="521.0" layoutY="97.0" prefHeight="25.0" prefWidth="156.0" promptText="La taille de n-gram" unFocusColor="#ab7af0" AnchorPane.leftAnchor="521.0" AnchorPane.topAnchor="97.0" />
+            <JFXTextField fx:id="Docp" focusColor="#cdc3e1" labelFloat="true" layoutX="14.0" layoutY="143.0" prefHeight="33.0" prefWidth="453.0" promptText="Les documents pertinents pour la requête Q corresponde :" styleClass="textField" stylesheets="@../pfn/style.css" unFocusColor="#cbbde4" />
+            <TableView fx:id="tabres" layoutX="73.0" layoutY="201.0" prefHeight="377.0" prefWidth="790.0" stylesheets="@../pfn/style.css">
+               <columns>
+                  <TableColumn fx:id="nomd1" prefWidth="123.0" text="Nom documnet" />
+                  <TableColumn fx:id="score" prefWidth="160.0" text="Score" />
+                  <TableColumn fx:id="ft_idf" prefWidth="124.0" text="TF_IDF" />
+                  <TableColumn fx:id="patch" prefWidth="247.0" text="Patch" />
+                  <TableColumn fx:id="size" minWidth="0.0" prefWidth="129.0" text="Size" />
+               </columns>
+            </TableView>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" ellipsisString="Recherche" graphicTextGap="20.0" layoutX="717.0" layoutY="141.0" onAction="#rest" prefHeight="38.0" prefWidth="197.0" styleClass="buttonre" stylesheets="@../pfn/style.css" text="Restart" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Refresh_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pAcc" layoutX="111.0" layoutY="107.0" prefHeight="601.0" prefWidth="936.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="92.0">
+         <children>
+            <LineChart fx:id="lineChart" layoutX="244.0" layoutY="301.0" prefHeight="300.0" prefWidth="460.0" title="Rappel et Precision">
+              <xAxis>
+                <CategoryAxis prefHeight="19.0" prefWidth="814.0" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <LineChart fx:id="Chartrappel" layoutX="14.0" layoutY="2.0" prefHeight="300.0" prefWidth="460.0" title="Rappel" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="2.0">
+               <xAxis>
+                  <CategoryAxis prefHeight="19.0" prefWidth="814.0" fx:id="x1" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="y1" side="LEFT" />
+               </yAxis>
+            </LineChart>
+            <LineChart fx:id="Chartpres" layoutX="474.0" layoutY="2.0" prefHeight="300.0" prefWidth="460.0" title="Precision" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="474.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0">
+               <xAxis>
+                  <CategoryAxis prefHeight="19.0" prefWidth="814.0" fx:id="x11" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="y11" side="LEFT" />
+               </yAxis>
+            </LineChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
